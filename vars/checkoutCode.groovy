@@ -1,6 +1,6 @@
 def call(String repoUrl, String branch){
-   workDir = {env.WORKSPACE}
-   sh "echo ${workDir}"
-   sh "git clone ${repoUrl} ${workDir}"
+   def workingDir = "${env.WORKSPACE}"
+   sh "echo ${workingDir}"
+   sh "git clone ${repoUrl} ${workingDir}"
    sh "git checkout ${branch}"
 }
