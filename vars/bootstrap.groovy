@@ -15,7 +15,6 @@ def call(body) {
         agent any
 
         options {
-            ansiColor('xterm')
             buildDiscarder(
                 logRotator(
                     numToKeepStr: '5',
