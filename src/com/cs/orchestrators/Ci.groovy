@@ -5,9 +5,38 @@ def bootstrap(entryPointParams) {
     def flowType = entryPointParams.type
 
     switch (flowType) {
-        case 'ejerciciosCsLibs':
+        case 'ejercicio1':
             def jobs = new Jobs()
-            jobs.ciFlow(entryPointParams)
+            jobs.ejercicio1(entryPointParams)
+            break
+        case 'ejercicio2':
+            def jobs = new Jobs()
+            jobs.ejercicio2(entryPointParams)
+            break
+        case 'ejercicio3':
+        case 'ejercicio6':
+            def jobs = new Jobs()
+            jobs.ejercicio3(entryPointParams)
+            break
+        case 'ejercicio41':
+            def jobs = new Jobs()
+            jobs.ejercicio41(entryPointParams)
+            break
+        case 'ejercicio42':
+            def jobs = new Jobs()
+            jobs.ejercicio42(entryPointParams)
+            break
+        case 'ejercicio51':
+            def jobs = new Jobs()
+            jobs.ejercicio51(entryPointParams)
+            break
+        case 'ejercicio52':
+            def jobs = new Jobs()
+            jobs.ejercicio52(entryPointParams)
+            break
+        case 'ejercicio7':
+            def jobs = new Jobs()
+            jobs.ejercicio7(entryPointParams)
             break
         default:
             //NO HACE NADA
