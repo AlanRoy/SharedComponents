@@ -27,6 +27,7 @@ def call(body) {
             stage('Inicialization pipeline') {
                 steps {
                     script{
+                        echo params.nuevo_nombre
                         orchestrationFlow.bootstrap(config)
                     }
                 }

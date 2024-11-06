@@ -57,6 +57,8 @@ def ejercicio51(params) {
     def stageManager = new StageManager()
 
     stageManager.createStage("Ejercicio 5 - 1") {
+        echo Globals.nuevoNombre
+        
         build job: 'Ejercicio_5_2_SH', parameters: [
             string(name: 'nuevo_nombre',  value: Globals.nuevoNombre)
         ]
