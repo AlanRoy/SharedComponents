@@ -65,7 +65,7 @@ def ejercicio42(params) {
     } catch (Exception e) {
         println "CATCH"
     } finally {
-        postBuild.run()
+        println "FINALLY"
     }
 }
 
