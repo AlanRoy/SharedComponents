@@ -54,21 +54,6 @@ def ejercicio41(params) {
     }
 }
 
-def ejercicio42(params) {
-    def stageManager = new StageManager()
-    def postBuild = new JenkinsPostBuild(manager)
-
-    try {
-        stageManager.createStage("Ejercicio 3") {
-            hello "${env.BUILD_USER}"
-        }
-    } catch (Exception e) {
-        println "CATCH"
-    } finally {
-        println "FINALLY"
-    }
-}
-
 def ejercicio51(params) {
     def stageManager = new StageManager()
 
