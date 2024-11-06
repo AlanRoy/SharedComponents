@@ -11,6 +11,27 @@ def ciFlow(params) {
         echo "Hola Mundo."
     }
 
+    stageManager.createStage("Ejercicio 2") {
+        timeout(time: 30, unit: 'SECONDS') {
+            def inputNombre = input(
+                id: "userInput",
+                submitter: 'administrator,jon,daenerys',
+                submitterParameter: 'submitter',
+                message: "Escribe tu nombre",
+                parameters: [
+                    [
+                        $class: 'TextParameterDefinition',
+                        name: 'nombre',
+                        defaultValue: "",
+                        description: "Escribe tu nombre"
+                    ]
+                ]
+            )
+                        
+            echo "Hola ${inputNombre.nombre}"
+        }
+    }
+
     stageManager.createStage("Ejercicio 3") {
         hello "${env.BUILD_USER}"
     }
