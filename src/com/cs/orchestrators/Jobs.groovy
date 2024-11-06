@@ -58,18 +58,18 @@ def ejercicio51(params) {
 
     stageManager.createStage("Ejercicio 5 - 1") {
         echo Globals.nuevoNombre
-        
+
         build job: 'Ejercicio_5_2_SH', parameters: [
             string(name: 'nuevo_nombre',  value: Globals.nuevoNombre)
         ]
     }
 }
 
-def ejercicio52(params) {
+def ejercicio52(params, paramJob) {
     def stageManager = new StageManager()
 
     stageManager.createStage("Ejercicio 5 - 2") {
-        hello params.nuevoNombre
+        hello paramJob.nuevo_nombre
     }
 }
 
