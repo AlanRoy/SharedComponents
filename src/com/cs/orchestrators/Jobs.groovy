@@ -55,10 +55,17 @@ def ejercicio41(params) {
 }
 
 def ejercicio42(params) {
+    def stageManager = new StageManager()
     def postBuild = new JenkinsPostBuild(manager)
 
-    publishers {
-        groovyPostBuild(postBuild.run(), Behavior.DoNothing)
+    try {
+        stageManager.createStage("Ejercicio 3") {
+            hello "${env.BUILD_USER}"
+        }
+    } catch (Exception e) {
+        println "CATCH"
+    } finally {
+        postBuild.run()
     }
 }
 
