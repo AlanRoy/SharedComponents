@@ -56,16 +56,17 @@ def ejercicio41(params) {
 def ejercicio7(params) {
     def stageManager = new StageManager()
 
-    parallel {
-        stageManager.createStage("Hola") {
-            sh "echo 'Hola ${env.BUILD_USER}'"
-        }
+    stageManager.createStage("Parallel") {
+        parallel {
+            stageManager.createStage("Hola") {
+                sh "echo 'Hola ${env.BUILD_USER}'"
+            }
 
-        stageManager.createStage("Adios") {
-            sh "echo 'Adios ${env.BUILD_USER}'"
+            stageManager.createStage("Adios") {
+                sh "echo 'Adios ${env.BUILD_USER}'"
+            }
         }
     }
-
 }
 
 return this
