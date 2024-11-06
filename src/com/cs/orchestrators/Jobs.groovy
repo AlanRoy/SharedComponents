@@ -56,6 +56,7 @@ def ejercicio41(params) {
 def ejercicio7(params) {
     def stageManager = new StageManager()
 
+    stageManager.createStage("Parallel") {
         parallel {
             stageManager.createStage("Hola") {
                 echo "Hola ${env.BUILD_USER}."
@@ -65,6 +66,7 @@ def ejercicio7(params) {
                 echo "Adios ${env.BUILD_USER}."
             }
         }
+    }
 }
 
 return this
