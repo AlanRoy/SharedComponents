@@ -1,10 +1,10 @@
 package com.cs.globals
 
 class Globals {
-  final String futbol     = "Arsenal"
-  final String system     = "Windows 10"
-  final String serie      = "Breaking Bad"
-  final String laptop     = "HP Elitebook"
-  final String jenkinsJob = "Ejercicio_3_SH"
-  final String nuevoNombre = "Alan Aupart"
+  static String futbol      = "Arsenal"
+  static String system      = "Windows 10"
+  static String serie       = "Breaking Bad"
+  static String laptop      = "HP Elitebook"
+  static String jenkinsJob  = "Ejercicio_3_SH"
+  static String nuevoNombre = "Alan Aupart"
 }
