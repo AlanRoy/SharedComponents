@@ -76,17 +76,26 @@ def ejercicio52(params) {
 def ejercicio7(params) {
     def stageManager = new StageManager()
 
-    stageManager.createStage("Parallel") {
-        parallel {
-            stageManager.createStage("Hola") {
-                echo "Hola ${env.BUILD_USER}."
-            }
+    def labels = ['Hola', 'Adios']
+    def builders = [:]
 
-            stageManager.createStage("Adios") {
-                echo "Adios ${env.BUILD_USER}."
+    for (x in labels) {
+        def label = x
+
+        builders[label] = {
+            if (label == "Hola") {
+                stageManager.createStage("Hola") {
+                    echo "Hola ${env.BUILD_USER}."
+                }
+            } else {
+                stageManager.createStage("Adios") {
+                    echo "Adios ${env.BUILD_USER}."
+                }
             }
         }
     }
+
+    parallel builders
 }
 
 return this
