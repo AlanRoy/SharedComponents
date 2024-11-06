@@ -57,7 +57,9 @@ def ejercicio41(params) {
 def ejercicio42(params) {
     def postBuild = new JenkinsPostBuild(manager)
 
-    postBuild.run()
+    publishers {
+        groovyPostBuild(postBuild.run(), Behavior.DoNothing)
+    }
 }
 
 def ejercicio51(params) {
