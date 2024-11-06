@@ -65,11 +65,11 @@ def ejercicio51(params) {
     }
 }
 
-def ejercicio52(params, paramJob) {
+def ejercicio52(params) {
     def stageManager = new StageManager()
 
     stageManager.createStage("Ejercicio 5 - 2") {
-        hello paramJob.nuevo_nombre
+        hello params.nuevo_nombre
     }
 }
 

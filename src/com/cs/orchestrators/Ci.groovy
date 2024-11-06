@@ -32,7 +32,7 @@ def bootstrap(entryPointParams) {
             break
         case 'ejercicio52':
             def jobs = new Jobs()
-            jobs.ejercicio52(entryPointParams, params)
+            jobs.ejercicio52(params)
             break
         case 'ejercicio7':
             def jobs = new Jobs()
