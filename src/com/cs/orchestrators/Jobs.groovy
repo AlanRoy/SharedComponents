@@ -3,6 +3,7 @@ package com.cs.orchestrators
 
 import com.cs.globals.Globals
 import com.cs.managers.StageManager
+import com.cs.managers.JenkinsPostBuild
 
 def ejercicio1(params) {
     def stageManager = new StageManager()
@@ -51,6 +52,12 @@ def ejercicio41(params) {
     stageManager.createStage("Ejercicio 4 - 1") {
         build job: Globals.jenkinsJob
     }
+}
+
+def ejercicio42(params) {
+    def postBuild = new JenkinsPostBuild(manager)
+
+    postBuild.run()
 }
 
 def ejercicio51(params) {
