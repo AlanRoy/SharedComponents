@@ -5,5 +5,6 @@ class Globals {
   final String system     = "Windows 10"
   final String serie      = "Breaking Bad"
   final String laptop     = "HP Elitebook"
-  final String jenkinsJob = "Ejercicio_3"
+  final String jenkinsJob = "Ejercicio_3_SH"
+  final String nuevoNombre = "Alan Aupart"
 }

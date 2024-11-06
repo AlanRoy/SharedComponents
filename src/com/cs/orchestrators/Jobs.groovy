@@ -49,7 +49,25 @@ def ejercicio41(params) {
     def stageManager = new StageManager()
 
     stageManager.createStage("Ejercicio 4 - 1") {
-        build job: "Ejercicio_3_SH"
+        build job: "${Globals.jenkinsJob}"
+    }
+}
+
+def ejercicio51(params) {
+    def stageManager = new StageManager()
+
+    stageManager.createStage("Ejercicio 5 - 1") {
+        build job: 'Ejercicio_5_2_SH', parameters: [
+            string(name: 'nuevo_nombre',  value: "${Globals.nuevoNombre}")
+        ]
+    }
+}
+
+def ejercicio52(params) {
+    def stageManager = new StageManager()
+
+    stageManager.createStage("Ejercicio 5 - 2") {
+        hello "${params.nuevoNombre}"
     }
 }
 
