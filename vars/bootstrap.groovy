@@ -21,8 +21,6 @@ def call(body) {
                     artifactNumToKeepStr: '5'
                 )
             )
-            //disableConcurrentBuilds()
-            //disableResume()
         }
 
         stages {

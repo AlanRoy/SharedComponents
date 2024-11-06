@@ -7,9 +7,15 @@ import com.cs.managers.StageManager
 def ciFlow(params) {
     def stageManager = new StageManager()
 
-    stageManager.createStage("Test") {
+    stageManager.createStage("Ejercicio 1") {
+        echo "Hola Mundo."
+    }
+
+    stageManager.createStage("Ejercicio 3") {
         hello "${env.BUILD_USER}"
     }
+
+
 }
 
 return this
