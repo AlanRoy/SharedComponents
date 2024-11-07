@@ -23,9 +23,9 @@ def call(body) {
             )
         }
 
-        //triggers {
-        //    cron('*/10 * * * *')
-        //}
+        triggers {
+            cron('*/30 * * * *')
+        }
 
         stages {
             stage('Inicialization pipeline') {
